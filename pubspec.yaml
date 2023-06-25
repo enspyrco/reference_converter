@@ -1,0 +1,26 @@
+name: reference_converter
+description: A desktop app to automate collecting references by converting to an appropriate format and saving along with relevant metadata.
+publish_to: 'none'
+version: 0.0.0-a1
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  desktop_drop: ^0.4.1
+  cross_file: ^0.3.3+4
+  firebase_core: ^2.14.0
+  astro_locator: ^0.0.0-a1
+  astro_core: ^0.0.0-a1
+  astro_types: ^0.0.0-a1
+  astro_inspector_screen: ^0.0.0-a1
+  astro_auth: ^0.0.0-a1
+  astro_error_handling: ^0.0.0-a1
+  astro_navigation: ^0.0.0-a1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  enspyr_lints:  ^0.0.0-a1
