@@ -1,43 +1,43 @@
-import 'package:auth_for_perception/auth_for_perception.dart';
-import 'package:error_handling_for_perception/error_handling_for_perception.dart';
-import 'package:navigation_for_perception/navigation_for_perception.dart';
-import 'package:types_for_perception/auth_beliefs.dart';
-import 'package:types_for_perception/beliefs.dart';
-import 'package:types_for_perception/error_handling_types.dart';
-import 'package:types_for_perception/navigation_types.dart';
+import 'package:identity_in_perception/identity_in_perception.dart';
+import 'package:error_correction_in_perception/error_correction_in_perception.dart';
+import 'package:framing_in_perception/framing_in_perception.dart';
+import 'package:abstractions/identity.dart';
+import 'package:abstractions/beliefs.dart';
+import 'package:abstractions/error_correction.dart';
+import 'package:abstractions/framing.dart';
 
 class AppState
     implements
         CoreBeliefs,
-        AppStateNavigation,
-        AppStateErrorHandling,
-        AuthConcept {
-  AppState({required this.error, required this.auth, required this.navigation});
+        FramingConcept,
+        ErrorCorrectionConcept,
+        IdentityConcept {
+  AppState({required this.error, required this.auth, required this.framing});
 
   static AppState get initial => AppState(
-      error: DefaultErrorHandlingState.initial,
+      error: DefaultErrorCorrectionBeliefs.initial,
       auth: AuthBeliefSystem.initialBeliefs(),
-      navigation: DefaultNavigationState.initial);
+      framing: DefaultFramingBeliefs.initial);
 
   @override
-  final AuthBeliefs auth;
+  final IdentityBeliefs auth;
 
   @override
-  final DefaultErrorHandlingState error;
+  final DefaultErrorCorrectionBeliefs error;
 
   @override
-  final DefaultNavigationState navigation;
+  final DefaultFramingBeliefs framing;
 
   @override
   AppState copyWith({
-    DefaultErrorHandlingState? error,
-    AuthBeliefs? auth,
-    DefaultNavigationState? navigation,
+    DefaultErrorCorrectionBeliefs? error,
+    IdentityBeliefs? auth,
+    DefaultFramingBeliefs? framing,
   }) {
     return AppState(
       error: error ?? this.error,
       auth: auth ?? this.auth,
-      navigation: navigation ?? this.navigation,
+      framing: framing ?? this.framing,
     );
   }
 
@@ -45,6 +45,6 @@ class AppState
   toJson() => {
         'auth': auth.toJson(),
         'error': error.toJson(),
-        'navigation': navigation.toJson(),
+        'navigation': framing.toJson(),
       };
 }

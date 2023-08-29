@@ -5,10 +5,17 @@ packages:
     dependency: transitive
     description:
       name: _flutterfire_internals
-      sha256: a742f71d7f3484253a623b30e19256aa4668ecbb3de6ad1beb0bcf8d4777ecd8
+      sha256: "1a5e13736d59235ce0139621b4bbe29bc89839e202409081bc667eb3cd20674c"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.3"
+    version: "1.3.5"
+  abstractions:
+    dependency: "direct main"
+    description:
+      path: "../../utils/perception/abstractions"
+      relative: true
+    source: path
+    version: "0.0.0-a1"
   async:
     dependency: transitive
     description:
@@ -17,13 +24,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.0"
-  auth_for_perception:
-    dependency: "direct main"
-    description:
-      path: "../../utils/perception/auth/auth_for_perception"
-      relative: true
-    source: path
-    version: "0.0.0-a1"
   boolean_selector:
     dependency: transitive
     description:
@@ -56,13 +56,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.2"
-  core_of_perception:
-    dependency: "direct main"
-    description:
-      path: "../../utils/perception/core_of_perception"
-      relative: true
-    source: path
-    version: "0.0.0-a1"
   cross_file:
     dependency: "direct main"
     description:
@@ -83,10 +76,10 @@ packages:
     dependency: "direct main"
     description:
       name: desktop_drop
-      sha256: "4ca4d960f4b11c032e9adfd2a0a8ac615bc3fddb4cbe73dcf840dd8077582186"
+      sha256: ebba9c9cb0b54385998a977d741cc06fd8324878c08d5a36e9da61cd56b04cc6
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.1"
+    version: "0.4.3"
   enspyr_lints:
     dependency: "direct dev"
     description:
@@ -96,10 +89,10 @@ packages:
       url: "https://github.com/enspyrco/enspyr_lints"
     source: git
     version: "0.0.0-a1"
-  error_handling_for_perception:
+  error_correction_in_perception:
     dependency: "direct main"
     description:
-      path: "../../utils/perception/error_handling_for_perception"
+      path: "../../utils/perception/error_correction_in_perception"
       relative: true
     source: path
     version: "0.0.0-a1"
@@ -115,27 +108,20 @@ packages:
     dependency: transitive
     description:
       name: firebase_auth
-      sha256: f693c0aa998b1101453878951b171b69f0db5199003df1c943b33493a1de7917
+      sha256: "02d9cdf1305f0c22cde492802598a13a1975ec8aa05bf608be799f939352cbe8"
       url: "https://pub.dev"
     source: hosted
-    version: "4.6.3"
+    version: "4.8.0"
   firebase_auth_platform_interface:
     dependency: transitive
     description:
       name: firebase_auth_platform_interface
-      sha256: "689ae048b78ad088ba31acdec45f5badb56201e749ed8b534947a7303ddb32aa"
+      sha256: "19f8d0762544b72471b85bb56469448c3dc9f98b8b8574f744873ec18e04e18c"
       url: "https://pub.dev"
     source: hosted
-    version: "6.15.3"
-  firebase_auth_service_flutterfire:
-    dependency: "direct overridden"
-    description:
-      path: "../../utils/flutterfire/firebase_auth_service_flutterfire"
-      relative: true
-    source: path
-    version: "0.0.0-a1"
+    version: "6.17.0"
   firebase_auth_service_interface:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
       path: "../../../dart/interfaces/firebase_auth_service_interface"
       relative: true
@@ -145,18 +131,18 @@ packages:
     dependency: transitive
     description:
       name: firebase_auth_web
-      sha256: f35d637a1707afd51f30090bb5234b381d5071ccbfef09b8c393bc7c65e440cd
+      sha256: ae01b306ae03856c1f0682796ea87bacaab72da44e4b728271c806db99620712
       url: "https://pub.dev"
     source: hosted
-    version: "5.5.3"
+    version: "5.7.0"
   firebase_core:
     dependency: "direct main"
     description:
       name: firebase_core
-      sha256: a4a99204da264a0aa9d54a332ea0315ce7b0768075139c77abefe98093dd98be
+      sha256: c78132175edda4bc532a71e01a32964e4b4fcf53de7853a422d96dac3725f389
       url: "https://pub.dev"
     source: hosted
-    version: "2.14.0"
+    version: "2.15.1"
   firebase_core_platform_interface:
     dependency: transitive
     description:
@@ -169,10 +155,10 @@ packages:
     dependency: transitive
     description:
       name: firebase_core_web
-      sha256: "0fd5c4b228de29b55fac38aed0d9e42514b3d3bd47675de52bf7f8fccaf922fa"
+      sha256: "4cf4d2161530332ddc3c562f19823fb897ff37a9a774090d28df99f47370e973"
       url: "https://pub.dev"
     source: hosted
-    version: "2.6.0"
+    version: "2.7.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -196,6 +182,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutterfire_firebase_auth_service:
+    dependency: "direct main"
+    description:
+      path: "../../utils/flutterfire/flutterfire_firebase_auth_service"
+      relative: true
+    source: path
+    version: "0.0.0-a1"
+  framing_in_perception:
+    dependency: "direct main"
+    description:
+      path: "../../utils/perception/framing_in_perception"
+      relative: true
+    source: path
+    version: "0.0.0-a1"
   http_parser:
     dependency: transitive
     description:
@@ -204,10 +204,17 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
-  inspector_for_perception:
+  identity_in_perception:
     dependency: "direct main"
     description:
-      path: "../../utils/perception/inspector_for_perception"
+      path: "../../utils/perception/identity/identity_in_perception"
+      relative: true
+    source: path
+    version: "0.0.0-a1"
+  introspection:
+    dependency: "direct main"
+    description:
+      path: "../../utils/perception/introspection"
       relative: true
     source: path
     version: "0.0.0-a1"
@@ -220,11 +227,11 @@ packages:
     source: hosted
     version: "0.6.7"
   json_utils:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
       path: "."
       ref: HEAD
-      resolved-ref: fd9b3b6942e2b9723afcc98705040279b015b72b
+      resolved-ref: "0510fa76db627b7b242dd7e5331c2eb67642f8f4"
       url: "https://github.com/enspyrco/json_utils"
     source: git
     version: "0.0.0-a1"
@@ -267,13 +274,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
-  navigation_for_perception:
-    dependency: "direct main"
-    description:
-      path: "../../utils/perception/navigation_for_perception"
-      relative: true
-    source: path
-    version: "0.0.0-a1"
   path:
     dependency: transitive
     description:
@@ -282,14 +282,21 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  percepts:
+    dependency: "direct main"
+    description:
+      path: "../../utils/perception/percepts"
+      relative: true
+    source: path
+    version: "0.0.0-a1"
   plugin_platform_interface:
     dependency: transitive
     description:
       name: plugin_platform_interface
-      sha256: "6a2128648c854906c53fa8e33986fc0247a1116122f9534dd20e3ab9e16a32bc"
+      sha256: "43798d895c929056255600343db8f049921cbec94d31ec87f1dc5c16c01935dd"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.4"
+    version: "2.1.5"
   sign_in_with_apple:
     dependency: transitive
     description:
@@ -367,6 +374,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.0"
+  test_utils_for_perception:
+    dependency: "direct main"
+    description:
+      path: "../../utils/perception/test_utils_for_perception"
+      relative: true
+    source: path
+    version: "0.0.0-a1"
   typed_data:
     dependency: transitive
     description:
@@ -376,20 +390,13 @@ packages:
     source: hosted
     version: "1.3.2"
   types_for_auth:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
       path: "."
       ref: HEAD
       resolved-ref: b5df027490d755b9dff5badb1504d9401d1b9064
       url: "https://github.com/enspyrco/types_for_auth"
     source: git
-    version: "0.0.0-a1"
-  types_for_perception:
-    dependency: "direct main"
-    description:
-      path: "../../utils/perception/types_for_perception"
-      relative: true
-    source: path
     version: "0.0.0-a1"
   vector_math:
     dependency: transitive
@@ -399,6 +406,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  web:
+    dependency: transitive
+    description:
+      name: web
+      sha256: dc8ccd225a2005c1be616fe02951e2e342092edf968cf0844220383757ef8f10
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.4-beta"
 sdks:
-  dart: ">=3.0.1 <4.0.0"
+  dart: ">=3.1.0-185.0.dev <4.0.0"
   flutter: ">=3.7.6"
