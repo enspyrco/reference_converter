@@ -38,7 +38,7 @@ void initializeApp() {
   initializeErrorHandling<AppState>();
   initializeAuthPlugin<AppState>(initialScreen: const ExampleDragTarget());
   initializeIntrospection<AppState>();
-  initializeNavigationPlugin<AppState>();
+  initializeFraming<AppState>();
 }
 
 class AstroBase extends StatelessWidget {
