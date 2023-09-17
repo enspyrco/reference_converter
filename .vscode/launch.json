@@ -19,7 +19,7 @@
       ]
     },
     {
-      "name": "devtools-inspector",
+      "name": "devtools-introspection",
       "request": "launch",
       "type": "dart",
       "toolArgs": [
