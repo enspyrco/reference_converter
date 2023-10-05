@@ -1,10 +1,10 @@
-import 'package:identity_in_perception/identity_in_perception.dart';
 import 'package:error_correction_in_perception/error_correction_in_perception.dart';
 import 'package:framing_in_perception/framing_in_perception.dart';
 import 'package:abstractions/identity.dart';
 import 'package:abstractions/beliefs.dart';
 import 'package:abstractions/error_correction.dart';
 import 'package:abstractions/framing.dart';
+import 'package:percepts/percepts.dart';
 
 class AppState
     implements
@@ -12,15 +12,16 @@ class AppState
         FramingConcept,
         ErrorCorrectionConcept,
         IdentityConcept {
-  AppState({required this.error, required this.auth, required this.framing});
+  AppState(
+      {required this.error, required this.identity, required this.framing});
 
   static AppState get initial => AppState(
       error: DefaultErrorCorrectionBeliefs.initial,
-      auth: AuthBeliefSystem.initialBeliefs(),
+      identity: DefaultIdentityBeliefs.initial,
       framing: DefaultFramingBeliefs.initial);
 
   @override
-  final IdentityBeliefs auth;
+  final IdentityBeliefs identity;
 
   @override
   final DefaultErrorCorrectionBeliefs error;
@@ -36,14 +37,14 @@ class AppState
   }) {
     return AppState(
       error: error ?? this.error,
-      auth: auth ?? this.auth,
+      identity: auth ?? this.identity,
       framing: framing ?? this.framing,
     );
   }
 
   @override
   toJson() => {
-        'auth': auth.toJson(),
+        'identity': identity.toJson(),
         'error': error.toJson(),
         'navigation': framing.toJson(),
       };
