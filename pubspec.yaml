@@ -4,7 +4,7 @@ publish_to: 'none'
 version: 0.0.0-a1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: '>=3.2.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -13,20 +13,10 @@ dependencies:
   cross_file: ^0.3.3
   firebase_core: ^2.17.0
   
-  abstractions:
-    git: https://github.com/enspyrco/abstractions
-  error_correction_in_perception:
-    git: https://github.com/enspyrco/error_correction_in_perception
-  framing_in_perception:
-    git: https://github.com/enspyrco/framing_in_perception
   introspection:
     git: https://github.com/enspyrco/introspection
-  locator_for_perception:
-    git: https://github.com/enspyrco/locator_for_perception
-  percepts:
-    git: https://github.com/enspyrco/percepts
-  test_utils_for_perception:
-    git: https://github.com/enspyrco/test_utils_for_perception
+  perception:
+    git: https://github.com/enspyrco/perception
   
   flutterfire_firebase_auth_for_perception:
     git: https://github.com/enspyrco/flutterfire_firebase_auth_for_perception

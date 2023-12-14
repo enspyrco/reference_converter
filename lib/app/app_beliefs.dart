@@ -1,21 +1,15 @@
-import 'package:error_correction_in_perception/error_correction_in_perception.dart';
-import 'package:framing_in_perception/framing_in_perception.dart';
-import 'package:abstractions/identity.dart';
-import 'package:abstractions/beliefs.dart';
-import 'package:abstractions/error_correction.dart';
-import 'package:abstractions/framing.dart';
-import 'package:percepts/percepts.dart';
+import 'package:perception/perception.dart';
 
-class AppState
+class AppBeliefs
     implements
         CoreBeliefs,
         FramingConcept,
         ErrorCorrectionConcept,
         IdentityConcept {
-  AppState(
+  AppBeliefs(
       {required this.error, required this.identity, required this.framing});
 
-  static AppState get initial => AppState(
+  static AppBeliefs get initial => AppBeliefs(
       error: DefaultErrorCorrectionBeliefs.initial,
       identity: DefaultIdentityBeliefs.initial,
       framing: DefaultFramingBeliefs.initial);
@@ -30,14 +24,14 @@ class AppState
   final DefaultFramingBeliefs framing;
 
   @override
-  AppState copyWith({
+  AppBeliefs copyWith({
     DefaultErrorCorrectionBeliefs? error,
-    IdentityBeliefs? auth,
+    IdentityBeliefs? identity,
     DefaultFramingBeliefs? framing,
   }) {
-    return AppState(
+    return AppBeliefs(
       error: error ?? this.error,
-      identity: auth ?? this.identity,
+      identity: identity ?? this.identity,
       framing: framing ?? this.framing,
     );
   }
